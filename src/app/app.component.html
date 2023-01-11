@@ -1,0 +1,16 @@
+<router-outlet></router-outlet>
+<nav  style="background-image:URL('./assets/slider-2.jpg');background-repeat: no-repeat;background-position: center; height:620px; width: 100%;display: flex;align-items: center;justify-content: center;" >
+  <div style="width:600px; background-color:#0009;color: white; padding:30px;text-align: center;">
+    <h2><img src="./assets/logoB.png" ></h2>
+    <div *ngIf="displayConn">
+      <app-connexion></app-connexion>
+    </div>
+    <div *ngIf="displayIn">
+      <app-incription></app-incription>
+    </div>
+    <div *ngIf="!displayConn && !displayIn">
+      <button type="submit" (click)="onPress(1)" style="margin:10px;width: 250px;border-radius: 50px;" class="btn btn-outline-light">Se connecter</button>
+      <button type="submit" (click)="onPress(2)" style="margin:10px;width: 250px;border-radius: 50px;" class="btn btn-outline-light">S'inscrire</button>
+    </div>
+  </div>
+</nav>
